@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Order wood-fired Mediterranean favorites from Olive & Ember.">
+  <title>Olive & Ember | Mediterranean Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> Your neighborhood table, now open for orders <span class="announcement-hours">Daily · 11:30 am – 10 pm</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Olive and Ember home">
+      <span class="brand-mark" aria-hidden="true">O<span>&</span>E</span>
+      <span class="brand-name">olive <em>&</em> ember<small>MEDITERRANEAN KITCHEN</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#our-story">Our kitchen</a>
+      <a href="#visit">Visit us</a>
+    </nav>
+    <button class="cart-trigger" id="cart-trigger" type="button" aria-label="Open your bag">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+      <span class="cart-trigger-label">Your bag</span><span class="cart-count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> GOOD FOOD, GATHERED WELL</p>
+        <h1 id="hero-title">A little taste<br>of the <i>Mediterranean.</i></h1>
+        <p class="hero-description">Slow afternoons, generous plates, and ingredients that speak for themselves. Made fresh in our kitchen, ready for your table.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#menu">Order something lovely <span aria-hidden="true">↗</span></a>
+          <span class="pickup-note"><span class="pickup-icon" aria-hidden="true">✳</span> Pickup in 20–30 min</span>
+        </div>
+        <div class="hero-footnote"><span class="hero-rule"></span> MADE WITH THE SEASONS IN MIND</div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1500&q=85" alt="A colorful Mediterranean table spread with fresh vegetables and herbs">
+        <div class="hero-image-caption"><span class="caption-star">✳</span><span>Gather around.<br><em>There’s always room.</em></span></div>
+        <span class="hero-photo-index">01 — FRESH FROM OUR KITCHEN</span>
+      </div>
+      <div class="hero-side-note" aria-hidden="true">COOKED SLOWLY · SHARED HAPPILY</div>
+    </section>
+
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> FROM OUR KITCHEN</p>
+          <h2 id="menu-title">Come hungry.</h2>
+        </div>
+        <p class="section-intro">Good things, made from scratch.<br>Pick a favorite and we’ll get cooking.</p>
+      </div>
+      <div class="menu-toolbar">
+        <div class="category-list" id="category-list" role="group" aria-label="Filter menu by category">
+          <button class="category-button is-active" type="button" data-category="All">Everything <span>08</span></button>
+          <button class="category-button" type="button" data-category="Small plates">Small plates</button>
+          <button class="category-button" type="button" data-category="Mains">Mains</button>
+          <button class="category-button" type="button" data-category="Sweets">Sweets</button>
+          <button class="category-button" type="button" data-category="Drinks">Drinks</button>
+        </div>
+        <span class="menu-note"><span class="leaf-icon" aria-hidden="true">✳</span> Seasonal, always</span>
+      </div>
+      <div class="ordering-layout">
+        <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+        <aside class="order-panel" id="order-panel" aria-label="Your order">
+          <div class="order-panel-head">
+            <div><p class="eyebrow">THE GOOD STUFF</p><h3>Your order <span class="order-count" id="order-count">(0)</span></h3></div>
+            <button class="icon-button close-cart" id="close-cart" type="button" aria-label="Close bag"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="order-items" id="order-items">
+            <div class="empty-order"><span class="empty-plate" aria-hidden="true">✳</span><strong>Your table’s waiting.</strong><p>Add a little something from the menu to get started.</p><a href="#menu" class="text-link">Browse the menu <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="order-summary" id="order-summary" hidden>
+            <div class="summary-line"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+            <div class="summary-line delivery-line" id="delivery-line" hidden><span>Delivery</span><span>$3.50</span></div>
+            <div class="summary-line total-line"><strong>Total</strong><strong id="total">$0.00</strong></div>
+            <p class="tax-note">Taxes calculated at checkout.</p>
+            <button class="button button-dark checkout-button" id="checkout-button" type="button">Continue to checkout <span aria-hidden="true">→</span></button>
+            <p class="secure-note"><span aria-hidden="true">✳</span> Made fresh after you order</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="story-strip" id="our-story">
+      <div class="story-photo"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1100&q=85" alt="A chef preparing fresh ingredients in the restaurant kitchen" loading="lazy"><span>OUR KITCHEN, EVERY DAY</span></div>
+      <div class="story-copy"><p class="eyebrow"><span></span> A TABLE FOR EVERYONE</p><h2>Good things<br>take <i>their time.</i></h2><p>We cook the way we like to eat: with the best ingredients we can find, a little patience, and enough to share. Come as you are. Leave well fed.</p><a class="text-link" href="#visit">A little more about us <span aria-hidden="true">↗</span></a></div>
+      <div class="story-stamp" aria-hidden="true">SLOW FOOD<br><span>✳</span><br>WARM HEARTS</div>
+    </section>
+
+    <section class="visit-section" id="visit">
+      <div><p class="eyebrow"><span></span> FIND YOUR WAY HERE</p><h2>We saved you<br>a <i>seat.</i></h2></div>
+      <div class="visit-details"><p>42 Orchard Street<br>Brooklyn, NY 11211</p><p>Every day, 11:30 am – 10 pm<br><a href="tel:+17185550148">(718) 555-0148</a></p><a class="text-link" href="https://maps.google.com/?q=42+Orchard+Street+Brooklyn+NY" target="_blank" rel="noreferrer">Get directions <span aria-hidden="true">↗</span></a></div>
+      <div class="visit-mark" aria-hidden="true">O<span>&</span>E</div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#home">olive <em>&</em> ember</a><span>GOOD FOOD, SHARED OFTEN.</span><span>© 2025 OLIVE & EMBER</span></footer>
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+
+  <dialog class="checkout-dialog" id="checkout-dialog" aria-labelledby="checkout-title">
+    <form class="checkout-form" id="checkout-form">
+      <div class="dialog-heading"><div><p class="eyebrow"><span></span> ALMOST THERE</p><h2 id="checkout-title">Let’s make it yours.</h2></div><button class="icon-button dialog-close" id="dialog-close" type="button" aria-label="Close checkout"><span aria-hidden="true">×</span></button></div>
+      <fieldset class="fulfillment-options"><legend>How would you like it?</legend><label class="fulfillment-choice"><input type="radio" name="fulfillment" value="pickup" checked><span class="choice-icon" aria-hidden="true">↗</span><span><strong>Pickup</strong><small>Ready in 20–30 min</small></span></label><label class="fulfillment-choice"><input type="radio" name="fulfillment" value="delivery"><span class="choice-icon" aria-hidden="true">⌂</span><span><strong>Delivery</strong><small>Usually 35–50 min · $3.50</small></span></label></fieldset>
+      <div class="form-fields"><label class="field-label">Your name<input name="name" autocomplete="name" required placeholder="First and last name"></label><label class="field-label">Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="(555) 555-0123"></label><label class="field-label address-field" hidden>Delivery address<input name="address" autocomplete="street-address" placeholder="Street and apartment"></label><label class="field-label">Anything we should know? <span>OPTIONAL</span><textarea name="notes" rows="2" placeholder="Allergies, substitutions, a little extra sauce…"></textarea></label></div>
+      <div class="checkout-total"><span>Order total</span><strong id="checkout-total">$0.00</strong></div>
+      <button class="button button-dark place-order-button" type="submit">Place your order <span aria-hidden="true">→</span></button>
+      <p class="demo-note">This is a demo checkout. No payment will be collected.</p>
+    </form>
+    <div class="order-success" id="order-success" hidden><span class="success-mark" aria-hidden="true">✳</span><p class="eyebrow">ORDER RECEIVED</p><h2>You’re in good hands.</h2><p id="success-message">We’re getting started on your order.</p><button class="button button-dark" id="success-close" type="button">Back to the menu <span aria-hidden="true">↗</span></button></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
